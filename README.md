@@ -1,102 +1,75 @@
-# Create a zip file containing the basic portfolio website structure
-import zipfile
-import os
-
-# Define the file structure for the portfolio website
-website_structure = {
-    "index.html": """
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samia Islam Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Samia Islam</h1>
-        <p>Rockville Centre, NY | <a href="mailto:islam.samia305@gmail.com">islam.samia305@gmail.com</a> | <a href="http://www.linkedin.com/in/samia-islam-29mar05/">LinkedIn</a></p>
-    </header>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Bachelor of Business Administration in Computer Information Systems at Baruch College, Zicklin School of Business. Expected May 2026.</p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
+        <nav>
             <ul>
-                <li><strong>RXR Realty Digital Lab Intern</strong> - Assisted in migrating enterprise knowledge repository content.</li>
-                <li><strong>Project Destined</strong> - Participated in a $1.2 Million real estate deal.</li>
-                <li><strong>Goldman Sachs & TechNYC Intern</strong> - Improved vaccine awareness in NYC communities.</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </section>
-        <section id="resume">
-            <h2>Resume</h2>
-            <p><a href="resume.pdf" target="_blank">Download My Resume</a></p>
-        </section>
-    </main>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to Samia Islam's Portfolio</h1>
+        <p>Explore my journey, projects, and get in touch with me for collaborations.</p>
+    </section>
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <p>Below is an overview of my professional and academic background. Download my full resume <a href="Samia_Islam_Resume.pdf" download>here</a>.</p>
+        <ul>
+            <li><strong>Education:</strong> Bachelor of Business Administration in Computer Information Systems (Expected May 2026)</li>
+            <li><strong>Relevant Experience:</strong>
+                <ul>
+                    <li>Digital Lab Intern at RXR Realty</li>
+                    <li>Commercial Real Estate Intern at Project Destined</li>
+                    <li>Intern at Goldman Sachs & TechNYC</li>
+                </ul>
+            </li>
+            <li><strong>Technical Skills:</strong> Python, JavaScript, HTML, CSS, MySQL, Microsoft Office Suite</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Real Estate Investment Pitch</h3>
+            <p>Collaborated with a team to develop a $1.2M real estate investment pitch, presented to industry professionals.</p>
+        </div>
+        <div class="project">
+            <h3>RXR Realty Knowledge Migration</h3>
+            <p>Streamlined enterprise knowledge repository content migration to improve search results.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out via the form below or directly at <a href="mailto:islam.samia305@gmail.com">islam.samia305@gmail.com</a>.</p>
+        <form action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Samia Islam. All rights reserved.</p>
+        <p>&copy; 2024 Samia Islam</p>
     </footer>
 </body>
 </html>
-""",
-    "style.css": """
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-header {
-    background: #007acc;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-}
-
-header p {
-    margin: 0.5rem 0;
-}
-
-main {
-    padding: 1rem;
-}
-
-section {
-    margin-bottom: 2rem;
-}
-
-h2 {
-    color: #007acc;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background: #333;
-    color: #fff;
-}
-""",
-    "resume.pdf": None  # Placeholder for the resume file
-}
-
-# Create the zip file
-zip_file_path = "/mnt/data/portfolio_website.zip"
-with zipfile.ZipFile(zip_file_path, 'w') as zipf:
-    for file_name, content in website_structure.items():
-        if content is not None:
-            zipf.writestr(file_name, content)
-        else:
-            # Embed the uploaded resume PDF into the zip file
-            with open("/mnt/data/Islam, Samia, Resume.pdf", "rb") as resume_file:
-                zipf.writestr("resume.pdf", resume_file.read())
-
-zip_file_path
