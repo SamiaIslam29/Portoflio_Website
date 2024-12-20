@@ -17,12 +17,10 @@
             </ul>
         </nav>
     </header>
-
     <section id="home">
         <h1>Welcome to Samia Islam's Portfolio</h1>
         <p>Explore my journey, projects, and get in touch with me for collaborations.</p>
     </section>
-
     <section id="resume">
         <h2>Resume</h2>
         <p>Below is an overview of my professional and academic background. Download my full resume <a href="Samia_Islam_Resume.pdf" download>here</a>.</p>
@@ -38,7 +36,6 @@
             <li><strong>Technical Skills:</strong> Python, JavaScript, HTML, CSS, MySQL, Microsoft Office Suite</li>
         </ul>
     </section>
-
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
@@ -50,24 +47,19 @@
             <p>Streamlined enterprise knowledge repository content migration to improve search results.</p>
         </div>
     </section>
-
     <section id="contact">
         <h2>Contact Me</h2>
         <p>Feel free to reach out via the form below or directly at <a href="mailto:islam.samia305@gmail.com">islam.samia305@gmail.com</a>.</p>
         <form action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
-
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
-
             <button type="submit">Send</button>
         </form>
     </section>
-
     <footer>
         <p>&copy; 2024 Samia Islam</p>
     </footer>
