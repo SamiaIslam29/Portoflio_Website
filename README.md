@@ -56,7 +56,6 @@
             <label for="email">Email: islam.samia305@gmail.com>
             <input type="email" id="email" name="email" required>
             <label for="phone number">Phone Number: 6467197607>
-            <textarea id="message" name="message" required></textarea>
             <button type="submit">Send</button>
         </form>
     </section>
