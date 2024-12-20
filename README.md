@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    Samia Islam Portfolio
+    Samia Islam's Portfolio
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -51,11 +51,11 @@
         <h2>Contact Me</h2>
         <p>Feel free to reach out via the form below or directly at <a href="mailto:islam.samia305@gmail.com">islam.samia305@gmail.com</a>.</p>
         <form action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST">
-            <label for="name">Name:</label>
+            <label for="name">Name:Samia Islma>
             <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
+            <label for="email">Email: islam.samia305@gmail.com>
             <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
+            <label for="phone number">Phone Number: 6467197607>
             <textarea id="message" name="message" required></textarea>
             <button type="submit">Send</button>
         </form>
