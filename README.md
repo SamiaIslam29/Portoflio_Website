@@ -51,7 +51,7 @@
         <h2>Contact Me</h2>
         <p>Feel free to reach out via the form below or directly at <a href="mailto:islam.samia305@gmail.com">islam.samia305@gmail.com</a>.</p>
         <form action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST">
-            <label for="name">Name:Samia Islma>
+            <label for="name">Name: Samia Islam>
             <input type="text" id="name" name="name" required>
             <label for="email">Email: islam.samia305@gmail.com>
             <input type="email" id="email" name="email" required>
